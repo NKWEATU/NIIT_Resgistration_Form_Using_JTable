@@ -365,7 +365,7 @@ PreparedStatement pst = null;
        try{
             String query = "INSERT INTO `studenttable`(`firstName`, `lastName`, `courseOfStudy`,`amountPaid`,`email`,`gender`) VALUES (?,?,?,?,?,?)";
                                         //use this line of code for mysql in xamp "jdbc:mysql://127.0.0.1:3306/user_registeration_database","root",""
-             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/niit_registration_app","root","Kenny4640");
+             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/niit_registration_app","root","*******");
              pst = con.prepareStatement(query);
              pst.setString(1, firstName.getText());
              pst.setString(2, lastName.getText());
@@ -448,7 +448,7 @@ if (firstName.getText().isEmpty() || lastName.getText().isEmpty() || gender.getS
     try {
         String student_Id = studentId.getText();
 
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/niit_registration_app", "root", "Kenny4640");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/niit_registration_app", "root", "*******");
 
         String query = "UPDATE studenttable SET firstName = ?, lastName = ?, courseOfStudy = ?, amountPaid = ?, email = ?, gender = ? WHERE studentId = ?";
 
@@ -502,7 +502,7 @@ if (firstName.getText().isEmpty() || lastName.getText().isEmpty() || gender.getS
     JOptionPane.showMessageDialog(null, "Select the student to be deleted by clicking on the table row");
    } else {
     try {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/niit_registration_app", "root", "Kenny4640");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/niit_registration_app", "root", "*******");
         String sName = firstName.getText();
 
         String query = "DELETE FROM studenttable WHERE firstName = ?";
